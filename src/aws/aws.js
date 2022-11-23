@@ -7,11 +7,11 @@ aws.config.update({
 })
 
 let uploadFile = async(file) => {
-    return new Promise(function(resolve, reject) {        /// single sstage   call back hell ko handle kkrne k leye promise ise krte hai
-        // Create S3 service object
+    return new Promise(function(resolve, reject) {        /// single stage   call back hell ko handle kkrne k leye promise ise krte hai
+        // Create S3 service object Access Control Lists
         let s3 = new aws.S3({ apiVersion: "2006-03-01" });
         var uploadParams = {
-            ACL: "public-read",                    // share with which which person like only me and everyone
+            ACL: "public-read",                    // share with which  person like only me and everyone
             Bucket: "classroom-training-bucket",  /// create user
             Key: "group45/" + file.originalname,    // this is bucket key 
             Body: file.buffer                       // make small data and puhsing into aws 
@@ -30,5 +30,3 @@ let uploadFile = async(file) => {
 module.exports =  uploadFile
 
 
-//event loop set time like excute afte 2mins and hold 2mins excute
- 

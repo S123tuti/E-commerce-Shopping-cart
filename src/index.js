@@ -7,12 +7,11 @@ const multer = require('multer')
 
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(multer().any())
 
 mongoose.connect("mongodb+srv://functionup:K3OCHkFxsJsV53MA@cluster0.e4rwd2y.mongodb.net/group45-DB",
 {
-    useNewUrlParser: true
+    useNewUrlParser: true //it will depriciate the vale of this links if this link hv some bugs so it will redirect to old link
 })
 .then( () => console.log("MongoDb is connected with Group 45"))
 .catch ( err => console.log(err) );

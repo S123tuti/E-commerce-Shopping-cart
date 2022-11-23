@@ -255,7 +255,7 @@ const updateProfile = async function (req, res) {
         }
 
         if (address) {
-            let objAddress = JSON.parse(address); // convort to object key
+            let objAddress = JSON.parse(address); // convert to object key
 
             if (objAddress.shipping) {
                 if (!validator.isValid(objAddress.shipping.street)) {

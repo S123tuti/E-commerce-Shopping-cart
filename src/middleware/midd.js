@@ -59,4 +59,4 @@ const Authorization = async (req, res, next) => {
   }
 }
 
-module.exports = { Authentication, Authorization }
+module.exports = { Authentication, Authorization } 
